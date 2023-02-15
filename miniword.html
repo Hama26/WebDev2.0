@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mini Word By Mohamed Hannachi</title>
+  <style>
+    fieldset {
+    background-color: navy;
+    border-color: #4b2cd8;
+  }
+  #label-name {
+    background-color: #4b2cd8;
+    font-size: 20px;
+    
+}
+  </style>
+    
+  </head>
+  <body>
+    <fieldset id = "fieldset">
+      <div id="div1">
+        <table>
+        <td><label id="label-name" for="name">Put Your text here</label>
+        <input
+          type="text"
+          id="text1"
+          name="text"
+          placeholder="Type Your text here"
+        ></td>
+    <td><label id="label2" for="name">Put Your number here</label>
+        <input type="number" required id="number" name="number" />
+        </td>
+        <td><label id="label3" for="name">font size</label>
+            <select id="color-select">
+                <option value="#f00">red</option>
+                <option value="green">green</option>
+                <option value="blue">blue</option>
+                <option value="orange">orange</option>
+            </select>
+        </td>
+      </div>
+     <td>
+     <select id="font-select">
+        <soption value="30px">30</option>
+        <option value="40px">40</option>
+        <option value="50px">50</option>
+        <option value="60px">60</option>
+        <option value="70px">70</option>
+     </select>
+     </td>
+    </table>
+    </fieldset>
+    <script>
+        document.getElementById("color-select").addEventListener("change", function() {
+    document.getElementById("fieldset").style.backgroundColor = this.value;
+  });
+  document.getElementById("text1").addEventListener("input", function() {
+    console.log("TT");
+    document.getElementById("label-name").style.backgroundColor= this.value;
+  });
+
+  document.getElementById("font-select").addEventListener("change", function() {
+    document.getElementById("label-name").style.fontSize = this.value;});
+    
+
+    </script>
+  </body>
+</html>
